@@ -1,0 +1,54 @@
+html,body{
+    margin: 1%;
+    scroll-behavior: auto;
+}
+.paraSystem{
+    background-color: antiquewhite;
+    text-anchor: start;
+    max-width: 80vw;
+    word-wrap: normal;
+    border-radius: 30px;
+    padding-left :10px;
+    padding-right: 10px;
+    border: solid 1px salmon;
+    margin-right: auto;
+    margin-top: 0.3lh;
+    margin-bottom: 0.3lh;
+}
+.paraUser{
+    background-color: aqua;
+    width: 80vw;
+    /* border-top-left-radius: 30px; */
+    border-radius: 30px;
+    word-wrap: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    border: double 1px blue;
+    /* margin-right: 0px; */
+    /* margin-left: 12vw; *//
+    /* position-anchor: right; */
+    
+}
+.user-input{
+    border-radius: 30px;
+    width : 90vw;
+    margin-left: 1.5vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: sticky;
+    bottom: 0px;
+    order: 2;
+    word-wrap: break-word;
+    /* height: 5lh; */
+}
+.input-div{
+    background-color: aliceblue;
+    position: sticky;
+    left: 0;
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+.clickable{
+    color: blue;
+}
