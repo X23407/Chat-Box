@@ -1,25 +1,50 @@
 html,body{
     margin: 1%;
     scroll-behavior: auto;
+    font-family:Arial, sans-serif;
+    background: linear-gradient(to right, black,slategray,black);
+
 }
+
+/* @media screen and (min-width: 900px ) {
+    body {
+        /* background-color: #2c3e50; 
+        background: linear-gradient(to right,violet,indigo,blue,green,yellow,red);
+
+    /* }
+}
+@media screen and (max-width: 900px) {
+    body {
+        /* background: radial-gradient(circle, orangered, orange, white); */
+        /* background: radial-gradient(circle, blue, aqua, white); */
+        /* background-color: #2c3e50;
+        background-color: slategray; */
+        /* background: linear-gradient(to right, black,slategray,black);
+    } 
+} */
+
 .paraSystem{
     background-color: antiquewhite;
     text-anchor: start;
     max-width: 80vw;
     word-wrap: normal;
-    border-radius: 30px;
+    /* border-radius: 30px; */
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     padding-left :10px;
     padding-right: 10px;
     border: solid 1px salmon;
     margin-right: auto;
     margin-top: 0.3lh;
-    margin-bottom: 0.3lh;
+    padding-bottom: 0.2lh;
+    margin-bottom: 0.7lh;
 }
 .paraUser{
     background-color: aqua;
     width: 80vw;
-    /* border-top-left-radius: 30px; */
-    border-radius: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* border-radius: 30px; */
     word-wrap: normal;
     padding-left: 10px;
     padding-right: 10px;
@@ -31,24 +56,57 @@ html,body{
     
 }
 .user-input{
-    border-radius: 30px;
+    border-radius: 10px;
     width : 90vw;
     margin-left: 1.5vw;
     padding-left: 10px;
     padding-right: 10px;
-    position: sticky;
+    /* position: sticky; */
     bottom: 0px;
     order: 2;
     word-wrap: break-word;
+    scrollbar-width: none;
+    resize: none;
+    border: 2px solid black;
+    /* position: sticky; */
     /* height: 5lh; */
 }
 .input-div{
-    background-color: aliceblue;
-    position: sticky;
+    /* background-color: rgb(52, 107, 156); */
+    position: static;
     left: 0;
     margin-top: auto;
     margin-bottom: 30px;
 }
 .clickable{
     color: blue;
+}
+.heading{
+    text-align:center; font-size:22px; font-weight:bold; margin-bottom:10px; color:#2c3e50;
+}
+.code{
+    display: inline-block;
+    padding: 1px;
+    font-family: monospace;
+    font-size: large;
+    background-color:rgba(160, 85, 85, 0.5);
+    border-radius: 3px;
+    margin: 1px;
+    padding-left: 1ch;
+    padding-right: 1ch;
+
+}
+
+.completed{
+    text-decoration: line-through solid;
+    color: grey;
+}
+
+.footer{
+    text-align: center;
+    display: inline-block;
+}
+.footer:hover{
+    background-color: #2c3e50;
+    border: 1px solid black;
 }
