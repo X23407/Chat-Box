@@ -86,6 +86,7 @@ class main{
                     text =text[2]+ "-" + text[1] + "-" + text[0];
                 }
             }
+            
             let bday_real = new Date(text)
             console.log(text)
             let now = new Date();
@@ -103,13 +104,50 @@ class main{
                 month --;
                 day += 30;
             }
-            this.u.paraBox(`Your age is ${age} year ${month} Month and ${day} days`)
+            let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+            let week_day = days[bday_real.getDay()]
+            this.u.paraBox(`Your age is ${age} year ${month} Month and ${day} days<br>You were born on<span class='code'> ${week_day}</span>.`)
             if (age <0){
                 this.u.paraBox(`Wow you are from future!!!,<br>What a great man who is alive before being birth.`)
             }else if (age == 0){
                 this.u.paraBox(`Comepition has really became hard, a child who is just born know How to type!!!`)
             }
     }
+
+    week_day(text){
+        let p = /^\d{2,4}[-/]{1}\d{2}[-/]{1}\d{2,4}$/
+        if (!p.test(text)){
+            this.u.paraBox(`
+                Enter your date in proper format <br>
+                <span class="code">dd-mm-yyyy</span> or 
+                <span class="code">yyyy-mm-dd</span> <br>`)
+                return
+        }
+        let og = text;
+        text = text.split("-");
+        if (text.length ===3){
+            if (text[0].length ==4){
+                text = text.join("-")
+            }else if (text[0].length ==2){
+                text =text[2]+ "-" + text[1] + "-" + text[0];
+            }
+        }
+        
+        let date = new Date(text)
+        let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        let week_day = days[date.getDay()]
+        this.u.paraBox(`The day on <span class='code'> ${og}</span> is <span class='code'> ${week_day}</span>.`)
+    }
+
+    today(){
+        let today = new Date()
+        let date = `${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()}`
+        let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        let week_day = days[today.getDay()]
+        this.u.paraBox(`The date is <span class='code'> ${date}</span> and the day is <span class='code'> ${week_day}</span>.`)
+        console.log(date)
+    }
+
 
     simulate(){
         console.log(this.history);
@@ -183,6 +221,12 @@ class main{
                 return
         }else if (userInput.startsWith("cd name")){
             this.changeName(userInput)
+        }else if (userInput.toLowerCase() == "today"){
+            this.today()
+        }else if (userInput.startsWith("day")){
+            userInput = userInput.split(" ");
+            this.week_day(userInput[1])
+            return
         }else if(userInput.toLowerCase() === "clear"){
             // window.location.reload();
             this.cleaner();

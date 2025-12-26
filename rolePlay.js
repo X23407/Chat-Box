@@ -165,7 +165,7 @@ async function pkmnDetail(pkmn) {
         }
         let para = document.createElement("p");
         para.className = "paraSystem";
-        para.innerHTML = `The detail about ${pkmn} is here below..`;
+        para.innerHTML = `The detail about <span class="code">${pkmn}</span> is here below..`;
         lastSender = "system";
         let label = document.createElement("h3");
         label.innerHTML = pkmn;
@@ -192,7 +192,10 @@ async function pkmnDetail(pkmn) {
         document.getElementById("para-div").appendChild(para);
         console.log(data)
     }catch(error){
-        paraBox(`No pokemon with name '${pkmn}' exist!`)
+        let para = document.createElement("p");
+        para.className = "paraSystem";
+        para.innerHTML = `No pokemon with name <span class = "code">'${pkmn}'</span> exist!`
+        document.getElementById("para-div").appendChild(para);
 
     }
     
