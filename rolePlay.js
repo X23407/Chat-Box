@@ -216,7 +216,8 @@ function personalInfo(userInput = "pinfo github") {
         "map" : "https://x23407.github.io/Map/",
         "typefast" : "https://x23407.github.io/TypeFast/index.html",
         "html notes" :"https://x23407.github.io/HTML-Notes/",
-        "array practices" : "https://x23407.github.io/array-practice/"
+        "array practices" : "https://x23407.github.io/array-practice/",
+        "to so web" : "https://to-do-7845b.web.app/"
     }
     let avail_optn = {}
     console.log(Object.keys(linkObj))

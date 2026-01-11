@@ -295,6 +295,14 @@ let lastSender = "system"
 let input_bpx = document.createElement("textarea");
 input_bpx.id = "uInput";
 input_bpx.className = "user-input";
+
+/*Disabling the auto complete and auto capitaliation on phone*/
+input_bpx.autocapitalize = "off";
+input_bpx.autocomplete = "off";
+input_bpx.spellcheck = false;
+
+{/* <textarea autocapitalize="off" spellCheck="false" autoComplete="off" /> */}
+
 input_bpx.type = "text";
 document.getElementById("input-div").appendChild(input_bpx);
 input_bpx.placeholder = "Type your message here...";
